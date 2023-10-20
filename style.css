@@ -1,0 +1,135 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: url(./photo.jpg);
+    background-size: cover;
+    height: 100vh;
+    filter: brightness(50%);
+    font-family: 'Poppins';
+}
+
+.sidebar_menu{
+    width: 15%;
+    background-color: black;
+    opacity: 0.7;
+    height: 100vh;
+    position: absolute;
+    left: 100%;
+    display: none;
+    transition: 5s;
+}
+
+.btn_one{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.btn_one:hover, .btn_two:hover{
+    cursor: pointer;
+}
+
+label:hover{
+    cursor: pointer;
+}
+
+.btn_two{
+    display: none;
+}
+
+.main_box input#check:checked ~ .sidebar_menu{
+    position: absolute;
+    left: 0;
+    display: block;
+}
+
+.main_box input#check:checked ~ .btn_one{
+    display: none;
+}
+
+.main_box input#check:checked ~ .sidebar_menu .btn_two{
+    display: unset;
+    position: absolute;
+    top: 25px;
+    left: 190px;
+}
+
+.sidebar_menu .logo{
+    font-size: 22px;
+    text-transform: uppercase;
+    position: relative;
+    top: 2.5%;
+    left: 5%;
+    font-weight: 700;
+}
+
+.main_box input{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 2.5%;
+    left: 12%;
+    transform: translate(-2.5%, -12%);
+    display: none;
+    z-index: 50;
+    cursor: pointer;
+}
+
+.main_box label i{
+    font-size: 40px;
+    position: absolute;
+    top: 2.5%;
+    left: 12%;
+    transform: translate(-2.5%, -12%);
+}
+
+.menu ul, .menu a, a{
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+    opacity: 0.7;
+}
+
+.menu{
+    margin: 75px auto;
+}
+
+.menu ul li{
+    width: 100%;
+    height: 50px;
+    padding: 10px 10px;
+    transition: 0.5s;
+}
+
+.menu ul li:hover{
+    border: 2px solid grey;
+    opacity: 1;
+    color: #fff;
+    cursor: pointer;
+}
+
+.menu ul li:hover > a{
+    color: #fff;
+    opacity: 1;
+}
+
+.social_media{
+    font-size: 25px;
+    letter-spacing: 7.5px;
+    position: relative;
+    top: 25%;
+    text-align: center;
+    color: #e2e2e2;
+    transition: 0.5s;
+    opacity: 0.5;
+}
+
+.social_media a:hover{
+    color: white;
+    opacity: 2;
+    font-weight: 700;
+}
